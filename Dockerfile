@@ -2,10 +2,10 @@
 FROM node:18-alpine AS build
 
 # Create a directory for the application
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy package.json and package-lock.json
-COPY package*.json ./
+COPY . .
 
 # Install dependencies
 RUN npm install
